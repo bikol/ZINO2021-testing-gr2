@@ -48,4 +48,14 @@ public class DodawanieTest {
         assertEquals(expResult, result);
     }
     
+    @Test
+    public void testDodajDecimal() {
+        System.out.println("dodajDecimal");
+        String a = "1.10";
+        String b = "2.20";
+        Dodawanie instance = new Dodawanie();
+        String expResult = "3.30";
+        String result = instance.dodaj(a, b);
+        assertEquals(expResult, result);
+    }
 }
