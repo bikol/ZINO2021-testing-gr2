@@ -49,8 +49,8 @@ public class DodawanieTest {
     }
     
     @Test
-    public void testDodajDecimal() {
-        System.out.println("dodajDecimal");
+    public void testDodajDouble() {
+        System.out.println("dodajDouble");
         String a = "1.10";
         String b = "2.20";
         Dodawanie instance = new Dodawanie();
