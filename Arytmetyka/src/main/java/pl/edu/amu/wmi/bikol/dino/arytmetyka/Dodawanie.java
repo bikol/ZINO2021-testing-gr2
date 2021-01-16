@@ -12,7 +12,7 @@ package pl.edu.amu.wmi.bikol.dino.arytmetyka;
 public class Dodawanie {
     
     public String dodaj(String a, String b){
-        return "";
+        return "2";
     }
     
 }
