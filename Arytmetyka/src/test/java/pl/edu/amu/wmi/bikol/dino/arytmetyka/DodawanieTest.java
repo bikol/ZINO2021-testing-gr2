@@ -50,10 +50,10 @@ public class DodawanieTest {
     @Test
     public void testDodaj4() {
         System.out.println("dodaj4");
-        String a = "100";
-        String b = "125";
+        String a = "120";
+        String b = "225";
         Dodawanie instance = new Dodawanie();
-        String expResult = "22";
+        String expResult = "34.5";
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
     }
