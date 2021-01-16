@@ -9,13 +9,19 @@ package pl.edu.amu.wmi.bikol.dino.arytmetyka;
  *
  * @author bikol
  */
+
+
 public class Dodawanie {
     
     public String dodaj(String a, String b){
     try {
-        Integer.parseInt(a);
-        Integer.parseInt(b);
-        return Integer.toString(Integer.parseInt(a) + Integer.parseInt(b));
+        Double.parseDouble(a);
+        Double.parseDouble(b);
+        double wynik= Double.parseDouble(a) + Double.parseDouble(b);
+        if(wynik == (long)wynik)
+            return String.format("%d",(long)wynik);
+        else
+            return String.format("%s",wynik);
     }
     catch( Exception e ) {
         return a+b;
