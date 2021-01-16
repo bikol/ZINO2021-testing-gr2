@@ -37,6 +37,7 @@ public class DodawanieTest {
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
     }
+  
     @Test
     public void testDodajdziesietne() {
         System.out.println("dodajdziesietne");
@@ -48,6 +49,16 @@ public class DodawanieTest {
         assertEquals(expResult, result);
     }
 
+    @Test
+    public void testDodajStr() {
+        System.out.println("dodajStr");
+        String a = "string1";
+        String b = "string2";
+        Dodawanie instance = new Dodawanie();
+        String expResult = "string1string2";
+        String result = instance.dodaj(a, b);
+        assertEquals(expResult, result);
+    }
 
     
 }
