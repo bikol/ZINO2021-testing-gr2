@@ -37,5 +37,17 @@ public class DodawanieTest {
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
     }
+    @Test
+    public void testDodajdziesietne() {
+        System.out.println("dodajdziesietne");
+        String a = "1.3";
+        String b = "0.7";
+        Dodawanie instance = new Dodawanie();
+        String expResult = "2";
+        String result = instance.dodaj(a, b);
+        assertEquals(expResult, result);
+    }
+
+
     
 }
