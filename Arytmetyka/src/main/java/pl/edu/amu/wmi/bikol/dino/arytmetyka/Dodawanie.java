@@ -11,14 +11,26 @@ package pl.edu.amu.wmi.bikol.dino.arytmetyka;
  */
 public class Dodawanie {
     
-    public String dodaj(String a, String b){
-    try {
-        Integer.parseInt(a);
-        Integer.parseInt(b);
-        return Integer.toString(Integer.parseInt(a) + Integer.parseInt(b));
+    public String convertToStringNumber(String a){
+        if(a == "one"){
+            return "1";
+        }else{
+            return a;
+        }
     }
-    catch( Exception e ) {
-        return a+b;
+
+    public String dodaj(String a, String b){
+        a = convertToStringNumber(a);
+        b = convertToStringNumber(b);
+
+        try {
+            
+            Integer.parseInt(a);
+            Integer.parseInt(b);
+            return Integer.toString(Integer.parseInt(a) + Integer.parseInt(b));
+        }
+        catch( Exception e ) {
+            return a+b;
         }
     
     }
