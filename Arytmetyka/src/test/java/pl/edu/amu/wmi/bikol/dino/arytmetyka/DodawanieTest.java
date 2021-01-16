@@ -18,12 +18,22 @@ public class DodawanieTest {
     }
 
     @Test
-    public void testDodaj() {
-        System.out.println("dodaj");
+    public void testDodaj1() {
+        System.out.println("dodaj1");
         String a = "1";
         String b = "1";
         Dodawanie instance = new Dodawanie();
         String expResult = "2";
+        String result = instance.dodaj(a, b);
+        assertEquals(expResult, result);
+    }
+        @Test
+    public void testDodaj2() {
+        System.out.println("dodaj2");
+        String a = "0";
+        String b = "0";
+        Dodawanie instance = new Dodawanie();
+        String expResult = "0";
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
     }
