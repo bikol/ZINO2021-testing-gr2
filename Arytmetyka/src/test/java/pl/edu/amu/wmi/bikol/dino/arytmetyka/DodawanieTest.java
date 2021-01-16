@@ -30,10 +30,10 @@ public class DodawanieTest {
         @Test
     public void testDodaj2() {
         System.out.println("dodaj2");
-        String a = "0";
+        String a = "1";
         String b = "0";
         Dodawanie instance = new Dodawanie();
-        String expResult = "0";
+        String expResult = "1";
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
     }
