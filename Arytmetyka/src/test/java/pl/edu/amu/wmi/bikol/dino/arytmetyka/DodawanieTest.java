@@ -47,5 +47,14 @@ public class DodawanieTest {
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
     }
-    
+    @Test
+    public void testDodajRound() {
+        System.out.println("dodajRound");
+        String a = "1.3";
+        String b = "1.7";
+        Dodawanie instance = new Dodawanie();
+        String expResult = "3";
+        String result = instance.dodaj(a, b);
+        assertEquals(expResult, result);
+    }
 }
