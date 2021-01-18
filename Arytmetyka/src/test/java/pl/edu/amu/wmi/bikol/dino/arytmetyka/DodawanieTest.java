@@ -5,8 +5,12 @@
  */
 package pl.edu.amu.wmi.bikol.dino.arytmetyka;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 
 /**
  *
@@ -15,6 +19,22 @@ import static org.junit.jupiter.api.Assertions.*;
 public class DodawanieTest {
     
     public DodawanieTest() {
+    }
+
+    @BeforeAll
+    public static void setUpClass() throws Exception {
+    }
+
+    @AfterAll
+    public static void tearDownClass() throws Exception {
+    }
+
+    @BeforeEach
+    public void setUp() throws Exception {
+    }
+
+    @AfterEach
+    public void tearDown() throws Exception {
     }
 
     @Test
@@ -47,5 +67,22 @@ public class DodawanieTest {
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
     }
+
+
+    /**
+     * Test of checkEven method, of class Dodawanie.
+     */
+    @Test
+    public void testCheckEven() {
+        System.out.println("checkEven");
+        int a = 3;
+        int b = 4;
+        Dodawanie instance = new Dodawanie();
+        int expResult = 1;
+        int result = instance.checkEven(a, b);
+        assertEquals(expResult, result);
+    }
+
+    
     
 }

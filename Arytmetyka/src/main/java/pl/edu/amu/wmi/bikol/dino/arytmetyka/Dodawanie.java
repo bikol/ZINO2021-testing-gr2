@@ -22,4 +22,13 @@ public class Dodawanie {
         }
     
     }
+    
+    public int checkEven(int a, int b){
+        
+        if((a+b)%2 == 0) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 }
