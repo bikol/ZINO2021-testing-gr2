@@ -78,7 +78,7 @@ public class DodawanieTest {
         int a = 3;
         int b = 4;
         Dodawanie instance = new Dodawanie();
-        int expResult = 1;
+        int expResult = 0;
         int result = instance.checkEven(a, b);
         assertEquals(expResult, result);
     }
