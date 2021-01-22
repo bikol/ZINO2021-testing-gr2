@@ -85,4 +85,14 @@ public class DodawanieTest {
 
     
     
+    @Test
+    public void testDodajDouble() {
+        System.out.println("dodajDouble");
+        String a = "1.15";
+        String b = "2.20";
+        Dodawanie instance = new Dodawanie();
+        String expResult = "3.35";
+        String result = instance.dodaj(a, b);
+        assertEquals(expResult, result);
+    }
 }
