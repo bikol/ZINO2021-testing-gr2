@@ -22,9 +22,13 @@ public class Dodawanie {
     }
         
     try {
-        Integer.parseInt(a);
-        Integer.parseInt(b);
-        return Integer.toString(Integer.parseInt(a) + Integer.parseInt(b));
+       Double.parseDouble(a);
+        Double.parseDouble(b);
+        double wynik = Math.round(Double.parseDouble(a)) + Math.round(Double.parseDouble(b));
+        if(wynik == (long)wynik)
+            return String.format("%d",(long)wynik);
+        else
+            return String.format("%s",wynik); 
     }
     catch( Exception e ) {
         return a+b;
