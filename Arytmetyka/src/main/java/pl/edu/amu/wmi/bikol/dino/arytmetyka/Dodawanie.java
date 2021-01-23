@@ -5,18 +5,26 @@
  */
 package pl.edu.amu.wmi.bikol.dino.arytmetyka;
 
+import java.text.DecimalFormat;
+
 /**
  *
  * @author bikol
  */
 public class Dodawanie {
-    
-    public String convertToStringNumber(String a){
-        if(a == "one"){
-            return "1";
-        }else{
-            return a;
-        }
+  
+    public String dodaj(String a, String b){
+        
+    if (a.contains(".") && b.contains(".")) {
+        DecimalFormat df = new DecimalFormat("#.##"); 
+        
+        return Double.toString(Double.valueOf(df.format(Double.parseDouble(a) + Double.parseDouble(b))));
+    }
+        
+    try {
+        Integer.parseInt(a);
+        Integer.parseInt(b);
+        return Integer.toString(Integer.parseInt(a) + Integer.parseInt(b));
     }
 
     public String dodaj(String a, String b){
@@ -33,5 +41,14 @@ public class Dodawanie {
             return a+b;
         }
     
+    }
+    
+    public int checkEven(int a, int b){
+        
+        if((a+b)%2 == 0) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 }
