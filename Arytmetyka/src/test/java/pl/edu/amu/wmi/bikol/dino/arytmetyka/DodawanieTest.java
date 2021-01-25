@@ -1,3 +1,4 @@
+  
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -5,8 +6,12 @@
  */
 package pl.edu.amu.wmi.bikol.dino.arytmetyka;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 
 /**
  *
@@ -15,6 +20,22 @@ import static org.junit.jupiter.api.Assertions.*;
 public class DodawanieTest {
     
     public DodawanieTest() {
+    }
+
+    @BeforeAll
+    public static void setUpClass() throws Exception {
+    }
+
+    @AfterAll
+    public static void tearDownClass() throws Exception {
+    }
+
+    @BeforeEach
+    public void setUp() throws Exception {
+    }
+
+    @AfterEach
+    public void tearDown() throws Exception {
     }
 
     @Test
@@ -47,6 +68,7 @@ public class DodawanieTest {
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
     }
+    
     @Test
     public void testDodaj4() {
         System.out.println("dodaj4");
@@ -57,5 +79,40 @@ public class DodawanieTest {
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
     }
+
+    /**
+     * Test of checkEven method, of class Dodawanie.
+     */
+    @Test
+    public void testCheckEven() {
+        System.out.println("checkEven");
+        int a = 3;
+        int b = 4;
+        Dodawanie instance = new Dodawanie();
+        int expResult = 0;
+        int result = instance.checkEven(a, b);
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testDodajStrNum() {
+        System.out.println("dodajStrNum");
+        String a = "one";
+        String b = "one";
+        Dodawanie instance = new Dodawanie();
+        String expResult = "2";
+        String result = instance.dodaj(a, b);
+        assertEquals(expResult, result);
+    } 
     
+    @Test
+    public void testDodajDouble() {
+        System.out.println("dodajDouble");
+        String a = "1.15";
+        String b = "2.20";
+        Dodawanie instance = new Dodawanie();
+        String expResult = "3.35";
+        String result = instance.dodaj(a, b);
+        assertEquals(expResult, result);
+    }
 }
