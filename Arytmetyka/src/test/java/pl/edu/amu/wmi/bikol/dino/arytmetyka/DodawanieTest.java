@@ -1,3 +1,4 @@
+  
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -68,7 +69,6 @@ public class DodawanieTest {
         assertEquals(expResult, result);
     }
 
-
     /**
      * Test of checkEven method, of class Dodawanie.
      */
@@ -83,7 +83,16 @@ public class DodawanieTest {
         assertEquals(expResult, result);
     }
 
-    
+    @Test
+    public void testDodajStrNum() {
+        System.out.println("dodajStrNum");
+        String a = "one";
+        String b = "one";
+        Dodawanie instance = new Dodawanie();
+        String expResult = "2";
+        String result = instance.dodaj(a, b);
+        assertEquals(expResult, result);
+    } 
     
     @Test
     public void testDodajDouble() {

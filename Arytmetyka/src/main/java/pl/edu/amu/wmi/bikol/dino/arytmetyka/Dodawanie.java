@@ -13,23 +13,31 @@ import java.text.DecimalFormat;
  */
 public class Dodawanie {
     
-    public String dodaj(String a, String b){
-        
-    if (a.contains(".") && b.contains(".")) {
-        DecimalFormat df = new DecimalFormat("#.##"); 
-        
-        return Double.toString(Double.valueOf(df.format(Double.parseDouble(a) + Double.parseDouble(b))));
-    }
-        
-    try {
-        Integer.parseInt(a);
-        Integer.parseInt(b);
-        return Integer.toString(Integer.parseInt(a) + Integer.parseInt(b));
-    }
-    catch( Exception e ) {
-        return a+b;
+    public String convertToStringNumber(String a){
+        if(a == "one"){
+            return "1";
+        }else{
+            return a;
         }
-    
+    }
+
+    public String dodaj(String a, String b){
+        a = convertToStringNumber(a);
+        b = convertToStringNumber(b);
+        if (a.contains(".") && b.contains(".")) {
+            DecimalFormat df = new DecimalFormat("#.##"); 
+            
+            return Double.toString(Double.valueOf(df.format(Double.parseDouble(a) + Double.parseDouble(b))));
+        }
+        
+        try {
+            Integer.parseInt(a);
+            Integer.parseInt(b);
+            return Integer.toString(Integer.parseInt(a) + Integer.parseInt(b));
+        }
+        catch( Exception e ) {
+            return a+b;
+        }
     }
     
     public int checkEven(int a, int b){
