@@ -55,7 +55,7 @@ public class Dodawanie {
             
             return String.valueOf(Integer.parseInt(a)+Integer.parseInt(b));
         }
-        else {
+        else {        
         a = convertToStringNumber(a);
         b = convertToStringNumber(b);
         if (a.contains(".") && b.contains(".")) {
@@ -83,7 +83,7 @@ public class Dodawanie {
         catch( Exception e ) {
             return a+b;
         }
-    }
+        }
     }
     
     public int checkEven(int a, int b){
