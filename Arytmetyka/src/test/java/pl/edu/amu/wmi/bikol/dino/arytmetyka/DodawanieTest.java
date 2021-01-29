@@ -115,4 +115,15 @@ public class DodawanieTest {
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
     }
+    
+        @Test
+    public void testDodajPomnozoneInt() {
+        System.out.println("dodajPomnozoneInt");
+        String a = "2*2";
+        String b = "3*10";
+        Dodawanie instance = new Dodawanie();
+        String expResult = "34";
+        String result = instance.dodaj(a, b);
+        assertEquals(expResult, result);
+    }
 }

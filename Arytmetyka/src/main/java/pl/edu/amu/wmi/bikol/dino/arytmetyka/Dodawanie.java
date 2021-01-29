@@ -22,6 +22,40 @@ public class Dodawanie {
     }
 
     public String dodaj(String a, String b){
+        if (a.contains("*") || b.contains("*")) {
+            int a_pos=a.indexOf("*");
+            int b_pos=b.indexOf("*");
+            String part1;
+            String part2;
+            
+            if(a_pos!=-1 && b_pos!=-1) //jesli oba stringi sa w postaci mnozenia
+            {
+                part1=a.substring(0, a_pos);
+                part2=a.substring(a_pos+1);
+                a=String.valueOf(Integer.parseInt(part1)*Integer.parseInt(part2));
+                part1=b.substring(0, b_pos);
+                part2=b.substring(b_pos+1);
+                b=String.valueOf(Integer.parseInt(part1)*Integer.parseInt(part2));
+            }
+            else
+            {
+                if(a_pos!=-1) //jesli string a jest w postaci mnozenia
+                {
+                    part1=a.substring(0, a_pos);
+                    part2=a.substring(a_pos+1);
+                    a=String.valueOf(Integer.parseInt(part1)*Integer.parseInt(part2));
+                }
+                else    //jesli str b jest w postaci mnozenia
+                {
+                    part1=b.substring(0, b_pos);
+                    part2=b.substring(b_pos+1);
+                    b=String.valueOf(Integer.parseInt(part1)*Integer.parseInt(part2));
+                }
+            }
+            
+            return String.valueOf(Integer.parseInt(a)+Integer.parseInt(b));
+        }
+        else {        
         a = convertToStringNumber(a);
         b = convertToStringNumber(b);
         if (a.contains(".") && b.contains(".")) {
@@ -48,6 +82,7 @@ public class Dodawanie {
         }
         catch( Exception e ) {
             return a+b;
+        }
         }
     }
     
