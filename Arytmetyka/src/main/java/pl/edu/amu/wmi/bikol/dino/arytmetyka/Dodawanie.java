@@ -13,6 +13,16 @@ import java.text.DecimalFormat;
  */
 public class Dodawanie {
     
+    public String Null(String a, String b) {
+        if(a == "") {
+            a = "0";
+        } 
+        if (b == "") {
+            b = "0";
+        } 
+        return String.valueOf(Integer.parseInt(a)+Integer.parseInt(b));
+    }
+    
     public String convertToStringNumber(String a){
         if(a == "one"){
             return "1";
