@@ -126,4 +126,15 @@ public class DodawanieTest {
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
     }
+  
+    @Test
+    public void testNull() {
+        System.out.println("dodajNull");
+        String a = "";
+        String b = "";
+        Dodawanie instance = new Dodawanie();
+        String expResult = "0";
+        String result = instance.dodaj(a, b);
+        assertEquals(expResult, result);
+    }
 }
