@@ -1,4 +1,4 @@
-  
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -18,7 +18,7 @@ import org.junit.jupiter.api.BeforeEach;
  * @author bikol
  */
 public class DodawanieTest {
-    
+
     public DodawanieTest() {
     }
 
@@ -48,7 +48,8 @@ public class DodawanieTest {
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
     }
-        @Test
+
+    @Test
     public void testDodaj2() {
         System.out.println("dodaj2");
         String a = "1";
@@ -58,6 +59,7 @@ public class DodawanieTest {
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
     }
+
     @Test
     public void testDodajStr() {
         System.out.println("dodajStr");
@@ -68,7 +70,7 @@ public class DodawanieTest {
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
     }
-    
+
     @Test
     public void testDodaj4() {
         System.out.println("dodaj4");
@@ -103,8 +105,8 @@ public class DodawanieTest {
         String expResult = "2";
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
-    } 
-    
+    }
+
     @Test
     public void testDodajDouble() {
         System.out.println("dodajDouble");
@@ -115,14 +117,25 @@ public class DodawanieTest {
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
     }
-    
-        @Test
+
+    @Test
     public void testDodajPomnozoneInt() {
         System.out.println("dodajPomnozoneInt");
         String a = "2*2";
         String b = "3*10";
         Dodawanie instance = new Dodawanie();
         String expResult = "34";
+        String result = instance.dodaj(a, b);
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testDodajLiczbeJakoString() {
+        System.out.println("testDodajLiczbeJakoString");
+        String a = "one";
+        String b = "zero";
+        Dodawanie instance = new Dodawanie();
+        String expResult = "1";
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
     }
