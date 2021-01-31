@@ -50,9 +50,15 @@ public class Dodawanie {
                     b = String.valueOf(Integer.parseInt(part1) * Integer.parseInt(part2));
                 }
             }
-
+            
             return String.valueOf(Integer.parseInt(a) + Integer.parseInt(b));
         } else {
+            if (a.equals("0,5")) {
+            a = "0.5";
+            }
+            if (b.equals("0,5")) {
+            b = "0.5";
+            }
             a = convertToStringNumber(a);
             b = convertToStringNumber(b);
             if (a.contains(".") && b.contains(".")) {
