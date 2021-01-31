@@ -14,12 +14,11 @@ import java.text.DecimalFormat;
 public class Dodawanie {
 
     public String convertToStringNumber(String a) {
-        if (a == "zero") {
-            return "0";
-        } else if (a == "one") {
-            return "1";
-        } else {
-            return a;
+        switch (a) {
+            case "zero": return "0";
+            case "one": return "1";
+            case "two": return "2";
+            default: return a;
         }
     }
 
