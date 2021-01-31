@@ -55,7 +55,15 @@ public class Dodawanie {
             
             return String.valueOf(Integer.parseInt(a)+Integer.parseInt(b));
         }
-        else {        
+        else {
+
+        if (a.equals("0,5")) {
+            a = "0.5";
+        }
+            if (b.equals("0,5")) {
+            b = "0.5";
+        }
+
         a = convertToStringNumber(a);
         b = convertToStringNumber(b);
         if (a.contains(".") && b.contains(".")) {
