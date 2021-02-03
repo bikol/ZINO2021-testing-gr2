@@ -53,6 +53,10 @@ public class Dodawanie {
             
             return String.valueOf(Integer.parseInt(a) + Integer.parseInt(b));
         } else {
+            if (a.startsWith("z") && b.startsWith("z")) {
+                a = a.substring(1);
+                b = b.substring(1);
+            }
             if (a.equals("0,5")) {
             a = "0.5";
             }
@@ -64,7 +68,7 @@ public class Dodawanie {
             if (a.contains(".") && b.contains(".")) {
                 DecimalFormat df = new DecimalFormat("#.##");
 
-                return Double.toString(Double.valueOf(df.format(Double.parseDouble(a) + Double.parseDouble(b))));
+                return Double.toString((Double.parseDouble(a) + Double.parseDouble(b)));
             }
 
             try {

@@ -159,4 +159,15 @@ public class DodawanieTest {
         String result = instance.dodaj(a, b);
         assertEquals(expResult, result);
     }
+
+    @Test
+    public void testFirstZ() {
+        System.out.println("testFirstZ");
+        String a = "z1.45";
+        String b = "z71.35";
+        Dodawanie instance = new Dodawanie();
+        String expResult = "72.8";
+        String result = instance.dodaj(a, b);
+        assertEquals(expResult, result);
+    }
 }
